@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+class App extends React.Component {
+    render() {
+        window.navigator.geolocation.getCurrentPosition(
+            (position) => console.log(position),
+            (error) => console.log(error)
+        );
 
-const App = () => {
-    window.navigator.geolocation.getCurrentPosition(
-        (position) => console.log(position),
-        (error) => console.log(error)
-    );
-
-    return (
-        <div>Hi there</div>
-    );
+        return <div>Latitude: </div>
+    }
 }
 
 ReactDOM.render(
