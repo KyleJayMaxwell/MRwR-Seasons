@@ -11,8 +11,6 @@ class App extends React.Component {
             (position) => {
                 // update state by calling setState
                 this.setState({ lat: position.coords.latitude });
-                // do not do this
-                // this.state.lat = position.coords.latitude
             },
             (error) => console.log(error)
         );
